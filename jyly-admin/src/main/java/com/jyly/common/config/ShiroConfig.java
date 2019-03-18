@@ -2,6 +2,7 @@ package com.jyly.common.config;
 
 import com.jyly.modules.sys.shiro.UserRealm;
 import org.apache.shiro.mgt.SecurityManager;
+
 import org.apache.shiro.session.mgt.SessionManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
@@ -48,6 +49,16 @@ public class ShiroConfig {
     public ServletContainerSessionManager servletContainerSessionManager() {
         return new ServletContainerSessionManager();
     }
+/*
+    @Bean("securityManager")
+    public SecurityManager securityManager(UserRealm userRealm, SessionManager sessionManager) {
+        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+        securityManager.setRealm(userRealm);
+        securityManager.setSessionManager(sessionManager);
+        securityManager.setRememberMeManager(null);
+
+        return securityManager;
+    }*/
 
     @Bean("securityManager")
     public SecurityManager securityManager(UserRealm userRealm, SessionManager sessionManager) {
