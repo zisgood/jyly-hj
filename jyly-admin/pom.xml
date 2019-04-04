@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>jyly-admin</artifactId>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <description>jyly-admin</description>
 
     <properties>
@@ -140,6 +140,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
